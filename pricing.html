@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment | GLOW STUDIO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-xl navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.svg" alt="Glow Studio Logo">
+                <span>GLOW STUDIO</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home <i class="bi bi-chevron-down dropdown-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.html">Home</a></li>
+                            <li><a class="dropdown-item" href="home-2.html">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="bridal-packages.html">Bridal</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-2">
+                    <button class="nav-icon-btn" id="theme-toggle" title="Toggle Theme">
+                        <i class="bi bi-moon-stars"></i>
+                    </button>
+                    <button class="nav-icon-btn" id="rtl-toggle" title="Toggle RTL">
+                        <i class="bi bi-arrow-left-right"></i>
+                    </button>
+                    <a href="booking.html" class="btn btn-outline-luxe px-3 py-2" style="font-size: 0.8rem;">Book Now</a>
+                    <a href="login.html" class="btn btn-luxe px-3 py-2" style="font-size: 0.8rem;">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <section class="hero-section" style="min-height: 50vh;">
+        <div class="hero-bg-media">
+            <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=2000&auto=format&fit=crop" alt="Pricing Hero">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container position-relative z-1 text-center">
+            <span class="section-tag">Pricing</span>
+            <h1 class="hero-title">Invest in Your Glow</h1>
+        </div>
+    </section>
+
+    <!-- Section 1: Pricing Cards -->
+    <section class="pricing-cards">
+        <div class="container">
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="luxe-card text-center">
+                        <h5>Standard Spray Tan</h5>
+                        <div class="display-4 text-rose-gold my-4">$65</div>
+                        <p class="text-muted small">8-12 hour development time. Includes customized color matching.</p>
+                        <hr class="my-4">
+                        <ul class="list-unstyled mb-4 pricing-features">
+                            <li><i class="bi bi-check text-rose-gold me-2"></i> pH Balancing Spray</li>
+                            <li><i class="bi bi-check text-rose-gold me-2"></i> Barrier Cream</li>
+                            <li><i class="bi bi-check text-rose-gold me-2"></i> Finishing Powder</li>
+                        </ul>
+                        <a href="booking.html" class="btn btn-outline-luxe w-100">Book Session</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="luxe-card text-center border-rose-gold shadow" style="border: 1px solid var(--rose-gold) !important;">
+                        <h5>Rapid Rinse Tan</h5>
+                        <div class="display-4 text-rose-gold my-4">$80</div>
+                        <p class="text-muted small">1-4 hour development time. Perfect for last-minute events.</p>
+                        <hr class="my-4">
+                        <ul class="list-unstyled mb-4 pricing-features">
+                            <li><i class="bi bi-check text-rose-gold me-2"></i> Fast Development</li>
+                            <li><i class="bi bi-check text-rose-gold me-2"></i> Organic Solution</li>
+                            <li><i class="bi bi-check text-rose-gold me-2"></i> Advanced Formula</li>
+                        </ul>
+                        <a href="booking.html" class="btn btn-luxe w-100">Book Session</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="luxe-card text-center">
+                        <h5>Airbrush Glam</h5>
+                        <div class="display-4 text-rose-gold my-4">$125</div>
+                        <p class="text-muted small">Full face HD airbrush makeup including premium lashes.</p>
+                        <hr class="my-4">
+                        <ul class="list-unstyled mb-4 pricing-features">
+                            <li><i class="bi bi-check text-rose-gold me-2"></i> Water Resistant</li>
+                            <li><i class="bi bi-check text-rose-gold me-2"></i> Long-wear Formula</li>
+                            <li><i class="bi bi-check text-rose-gold me-2"></i> Premium Lash Set</li>
+                        </ul>
+                        <a href="booking.html" class="btn btn-outline-luxe w-100">Book Session</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Add-ons & Event Packages -->
+    <section class="addons-section bg-secondary-soft">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <span class="section-tag">Group Luxury</span>
+                    <h2 class="section-title">Event & Party Packages</h2>
+                    <p class="text-muted mb-5">Host a glow party at our studio or your location. Perfect for bridal showers, bachelorettes, and special milestones.</p>
+                    <div class="luxe-card border-0 shadow-sm p-4 mb-4 mx-auto mx-lg-0" style="max-width: 500px;">
+                        <div class="d-flex justify-content-between">
+                            <h5>Host a Glow Party (5+ guests)</h5>
+                            <span class="text-rose-gold fw-bold">15% OFF</span>
+                        </div>
+                        <p class="small text-muted mb-0">Includes complimentary champagne for the group.</p>
+                    </div>
+                    <div class="luxe-card border-0 shadow-sm p-4 mx-auto mx-lg-0" style="max-width: 500px;">
+                        <div class="d-flex justify-content-between">
+                            <h5>Studio Full Buyout</h5>
+                            <span class="text-rose-gold fw-bold">Contact Us</span>
+                        </div>
+                        <p class="small text-muted mb-0">Private access for your entire bridal party.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center text-lg-start">
+                    <div class="luxe-card border-0 shadow-sm p-5 mx-auto mx-lg-0">
+                        <h4 class="mb-4">Treatment Add-ons</h4>
+                        <div class="d-flex justify-content-between border-bottom py-2">
+                            <span>Scent Drops (Coconut/Citrus)</span>
+                            <span class="text-rose-gold">$10</span>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom py-2">
+                            <span>Extra Deep Coat</span>
+                            <span class="text-rose-gold">$15</span>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom py-2">
+                            <span>Anti-Aging Mist</span>
+                            <span class="text-rose-gold">$20</span>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom py-2">
+                            <span>Full Body Exfoliation Prep</span>
+                            <span class="text-rose-gold">$45</span>
+                        </div>
+                        <div class="d-flex justify-content-between py-2">
+                            <span>Post-Tan Hydration Mist</span>
+                            <span class="text-rose-gold">$15</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Section 4: Service Comparison -->
+    <section class="service-comparison bg-secondary-soft">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="section-tag">Transparency</span>
+                <h2 class="section-title">Compare Your Options</h2>
+            </div>
+            <div class="comparison-table-wrapper reveal">
+                <table class="table comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Features</th>
+                            <th>Standard Tan</th>
+                            <th class="highlight">Rapid Rinse</th>
+                            <th>Airbrush Glam</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Consultation</td>
+                            <td><i class="bi bi-check2"></i></td>
+                            <td class="highlight"><i class="bi bi-check2"></i></td>
+                            <td><i class="bi bi-check2"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Drying Time</td>
+                            <td>8-12 Hours</td>
+                            <td class="highlight">1-4 Hours</td>
+                            <td>Instant</td>
+                        </tr>
+                        <tr>
+                            <td>Waterproof</td>
+                            <td><i class="bi bi-dash"></i></td>
+                            <td class="highlight"><i class="bi bi-check2"></i></td>
+                            <td><i class="bi bi-check2"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Skin Hydration</td>
+                            <td>Basic</td>
+                            <td class="highlight">Premium</td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Duration</td>
+                            <td>5-7 Days</td>
+                            <td class="highlight">7-10 Days</td>
+                            <td>24 Hours</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: FAQ Section (Dropdown/Accordion) -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center mb-5">
+                        <span class="section-tag">Knowledge Base</span>
+                        <h2 class="section-title">Common Questions</h2>
+                    </div>
+                    <div class="accordion accordion-luxe" id="faqAccordion">
+                        <div class="accordion-item reveal">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    How long will my spray tan last?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Depending on your skin type and aftercare routine, our professional spray tans typically last between 7 to 10 days. Using our recommended sulfate-free moisturizers will help extend the life of your glow.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item reveal">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    What should I wear to my appointment?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We recommend wearing dark, loose-fitting clothing and open-toed shoes (like flip-flops). Avoid jeans, leggings, or tight bras which can leave marks on your developing tan.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item reveal">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Is airbrush makeup suitable for oily skin?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes! Airbrush makeup is silicon-based or water-based, making it extremely durable and resistant to oil and sweat. It provides a matte finish that stays flawless for up to 16 hours.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item reveal">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    Do I need a trial for bridal makeup?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    While not mandatory, we highly recommend a trial session 6-8 weeks before your wedding. It allows us to perfect your look and ensure the products work harmoniously with your skin tone and gown.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-luxe">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <a href="index.html" class="footer-logo">
+                        <img src="assets/images/logo.svg" alt="Glow Studio Logo">
+                        <span>GLOW STUDIO</span>
+                    </a>
+                    <p class="text-muted">A luxury boutique studio dedicated to the art of the glow. Specializing in organic spray tanning and flawless airbrush makeup for the modern woman.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-pinterest"></i></a>
+                        <a href="#"><i class="bi bi-tiktok"></i></a>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 footer-links">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="gallery.html">Beauty Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h5>Services</h5>
+                    <ul>
+                        <li><a href="#">Bridal Airbrush</a></li>
+                        <li><a href="#">Custom Spray Tan</a></li>
+                        <li><a href="#">Event Makeup</a></li>
+                        <li><a href="#">Mobile Beauty</a></li>
+                        <li><a href="#">Group Bookings</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Newsletter</h5>
+                    <p class="text-muted small">Subscribe for beauty tips and exclusive studio offers.</p>
+                    <form class="mt-3">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Email Address" style="border-radius: 50px 0 0 50px; border-color: var(--border-color);">
+                            <button class="btn btn-luxe" type="button" style="border-radius: 0 50px 50px 0;">Join</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 GLOW STUDIO. All Rights Reserved. Crafted for Luxury.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

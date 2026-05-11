@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Artistry | GLOW STUDIO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-xl navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.svg" alt="Glow Studio Logo">
+                <span>GLOW STUDIO</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home <i class="bi bi-chevron-down dropdown-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.html">Home</a></li>
+                            <li><a class="dropdown-item" href="home-2.html">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="bridal-packages.html">Bridal</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-2">
+                    <button class="nav-icon-btn" id="theme-toggle" title="Toggle Theme">
+                        <i class="bi bi-moon-stars"></i>
+                    </button>
+                    <button class="nav-icon-btn" id="rtl-toggle" title="Toggle RTL">
+                        <i class="bi bi-arrow-left-right"></i>
+                    </button>
+                    <a href="booking.html" class="btn btn-outline-luxe px-3 py-2" style="font-size: 0.8rem;">Book Now</a>
+                    <a href="login.html" class="btn btn-luxe px-3 py-2" style="font-size: 0.8rem;">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Banner -->
+    <section class="hero-section" style="min-height: 50vh;">
+        <div class="hero-bg-media">
+            <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=2000&auto=format&fit=crop" alt="Services Hero">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container position-relative z-1 text-center">
+            <span class="section-tag">Premium Services</span>
+            <h1 class="hero-title">Elevate Your Natural Radiance</h1>
+        </div>
+    </section>
+
+    <!-- Section 1: Service Categories -->
+    <section class="service-categories">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="luxe-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=800&auto=format&fit=crop" alt="Spray Tanning">
+                        </div>
+                        <h3>Luxury Spray Tan</h3>
+                        <p class="text-muted">Signature custom-blend tanning for a flawless, natural glow. Includes prep and post-tan care consultation.</p>
+                        <ul class="list-unstyled small text-muted mb-4">
+                            <li><i class="bi bi-chevron-right text-rose-gold me-2"></i> Custom Blend Analysis</li>
+                            <li><i class="bi bi-chevron-right text-rose-gold me-2"></i> Rapid or Traditional Rinse</li>
+                            <li><i class="bi bi-chevron-right text-rose-gold me-2"></i> Hydration Treatment</li>
+                        </ul>
+                        <a href="service-details.html" class="btn btn-outline-luxe mt-auto w-100">View Options</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="luxe-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=800&auto=format&fit=crop" alt="Airbrush Makeup">
+                        </div>
+                        <h3>Airbrush Makeup</h3>
+                        <p class="text-muted">High-definition, weightless makeup application. Perfect for brides, photoshoots, and special events.</p>
+                        <ul class="list-unstyled small text-muted mb-4">
+                            <li><i class="bi bi-chevron-right text-rose-gold me-2"></i> Waterproof HD Finish</li>
+                            <li><i class="bi bi-chevron-right text-rose-gold me-2"></i> Luxury Faux Lashes</li>
+                            <li><i class="bi bi-chevron-right text-rose-gold me-2"></i> Custom Color Matching</li>
+                        </ul>
+                        <a href="service-details.html" class="btn btn-outline-luxe mt-auto w-100">View Options</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="luxe-card">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=800&auto=format&fit=crop" alt="Mobile Services">
+                        </div>
+                        <h3>Mobile Beauty</h3>
+                        <p class="text-muted">Our professional team comes to you. Luxury studio experience delivered to your home or hotel.</p>
+                        <ul class="list-unstyled small text-muted mb-4">
+                            <li><i class="bi bi-chevron-right text-rose-gold me-2"></i> Wedding Party Group</li>
+                            <li><i class="bi bi-chevron-right text-rose-gold me-2"></i> Event Preparation</li>
+                            <li><i class="bi bi-chevron-right text-rose-gold me-2"></i> Editorial Shoots</li>
+                        </ul>
+                        <a href="service-details.html" class="btn btn-outline-luxe mt-auto w-100">View Options</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Pricing by Area & Add-ons -->
+    <section class="pricing-summary bg-secondary-soft">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-5 mb-lg-0 text-center text-lg-start">
+                    <span class="section-tag">Value & Add-ons</span>
+                    <h2 class="section-title">Transparent Luxury Pricing</h2>
+                    <p class="text-muted mb-4">We believe in transparent pricing for our premium services. Every session includes a personalized skin assessment and premium product application.</p>
+                    <div class="luxe-card p-4 border-0 shadow-sm mx-auto mx-lg-0" style="max-width: 450px;">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Signature Spray Tan</span>
+                            <span class="fw-bold text-rose-gold">$65</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Airbrush Event Makeup</span>
+                            <span class="fw-bold text-rose-gold">$125</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Mobile Session Surcharge</span>
+                            <span class="fw-bold text-rose-gold">+$40</span>
+                        </div>
+                        <hr class="my-3 opacity-10">
+                        <div class="d-flex justify-content-between">
+                            <span class="fw-bold">Bridal Trial Bundle</span>
+                            <span class="fw-bold text-rose-gold">$180</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 ps-lg-5">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="luxe-card h-auto text-center text-md-start">
+                                <h5>Shimmer Add-on</h5>
+                                <p class="small text-muted mb-0">Subtle glow particles for extra radiance.</p>
+                                <span class="badge bg-rose-gold mt-2">$15</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="luxe-card h-auto text-center text-md-start">
+                                <h5>Anti-Aging Mist</h5>
+                                <p class="small text-muted mb-0">Infused with peptides for skin tightening.</p>
+                                <span class="badge bg-rose-gold mt-2">$20</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="luxe-card h-auto text-center text-md-start">
+                                <h5>Silk Finish</h5>
+                                <p class="small text-muted mb-0">Post-tan drying powder for comfort.</p>
+                                <span class="badge bg-rose-gold mt-2">$10</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="luxe-card h-auto text-center text-md-start">
+                                <h5>Express Rinse</h5>
+                                <p class="small text-muted mb-0">Rinse in as little as 2 hours.</p>
+                                <span class="badge bg-rose-gold mt-2">$15</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="signature-journey">
+        <div class="journey-container">
+            <div class="journey-tile" style="background-image: url('assets/images/luxury_consultation_1778428405162.png')">
+                <div class="tile-content">
+                    <span class="tile-number">01</span>
+                    <h3>The Vision</h3>
+                    <p>A deep-dive consultation to understand your skin tone, event vibe, and desired radiance level.</p>
+                </div>
+            </div>
+            <div class="journey-tile" style="background-image: url('assets/images/airbrush_artistry_1778428431977.png')">
+                <div class="tile-content">
+                    <span class="tile-number">02</span>
+                    <h3>The Artistry</h3>
+                    <p>Precision application using high-definition techniques that feel weightless and look flawless.</p>
+                </div>
+            </div>
+            <div class="journey-tile" style="background-image: url('assets/images/bronzed_glow_model_1778428528105.png')">
+                <div class="tile-content">
+                    <span class="tile-number">03</span>
+                    <h3>The Revelation</h3>
+                    <p>The final reveal of your luminous transformation, complete with post-care education and glow maintenance tips.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Product Philosophy (Glassmorphic Feature) -->
+    <section class="product-philosophy">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="philosophy-visual">
+                        <img src="assets/images/organic_products_flatlay_1778428556527.png" alt="Organic Products">
+                        
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="philosophy-content ps-lg-5 text-center text-lg-start">
+                        <span class="section-tag">Pure Ingredients</span>
+                        <h2 class="section-title">Clean Beauty, Professional Results</h2>
+                        <p class="text-muted mb-5">We exclusively use eco-certified DHA and botanical infusions. Our products are designed to nourish your skin while delivering a red-carpet ready finish.</p>
+                        
+                        <div class="feature-card-glass">
+                            <i class="bi bi-shield-check"></i>
+                            <div>
+                                <h4>Eco-Certified DHA</h4>
+                                <p>Naturally derived tanning agents for a safe, streak-free, and sunless glow.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card-glass">
+                            <i class="bi bi-droplet"></i>
+                            <div>
+                                <h4>Hydration Boosters</h4>
+                                <p>Infused with Hyaluronic Acid and Vitamin E to lock in moisture and extend tan life.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card-glass">
+                            <i class="bi bi-heart"></i>
+                            <div>
+                                <h4>Cruelty-Free Artistry</h4>
+                                <p>Never tested on animals. PETA-certified luxury products for a guilt-free glow.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-luxe">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <a href="index.html" class="footer-logo">
+                        <img src="assets/images/logo.svg" alt="Glow Studio Logo">
+                        <span>GLOW STUDIO</span>
+                    </a>
+                    <p class="text-muted">A luxury boutique studio dedicated to the art of the glow. Specializing in organic spray tanning and flawless airbrush makeup for the modern woman.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-pinterest"></i></a>
+                        <a href="#"><i class="bi bi-tiktok"></i></a>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 footer-links">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="gallery.html">Beauty Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h5>Services</h5>
+                    <ul>
+                        <li><a href="#">Bridal Airbrush</a></li>
+                        <li><a href="#">Custom Spray Tan</a></li>
+                        <li><a href="#">Event Makeup</a></li>
+                        <li><a href="#">Mobile Beauty</a></li>
+                        <li><a href="#">Group Bookings</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Newsletter</h5>
+                    <p class="text-muted small">Subscribe for beauty tips and exclusive studio offers.</p>
+                    <form class="mt-3">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Email Address" style="border-radius: 50px 0 0 50px; border-color: var(--border-color);">
+                            <button class="btn btn-luxe" type="button" style="border-radius: 0 50px 50px 0;">Join</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 GLOW STUDIO. All Rights Reserved. Crafted for Luxury.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
