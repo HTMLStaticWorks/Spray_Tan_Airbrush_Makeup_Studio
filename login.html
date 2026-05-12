@@ -5,28 +5,327 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | GLOW STUDIO</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
     <style>
-        body { display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+        :root {
+            --auth-page-base: #fff8f6;
+            --auth-grad-1: rgba(216, 155, 140, 0.24);
+            --auth-grad-2: rgba(216, 155, 140, 0.16);
+            --auth-card-bg: rgba(255, 255, 255, 0.92);
+            --auth-card-border: rgba(216, 155, 140, 0.32);
+            --auth-shadow: rgba(111, 72, 62, 0.2);
+            --auth-title: #2f2a2a;
+            --auth-subtitle: #6f5d5d;
+            --auth-input-bg: rgba(255, 255, 255, 0.95);
+            --auth-input-border: rgba(216, 155, 140, 0.35);
+            --auth-input-text: #2f2a2a;
+            --auth-placeholder: rgba(73, 59, 59, 0.5);
+            --auth-label: #7a5e58;
+            --auth-icon: #9d7d76;
+            --auth-icon-hover: #6a4a43;
+            --auth-icon-hover-bg: rgba(216, 155, 140, 0.18);
+            --auth-meta: #5f4e4d;
+            --auth-link: #8a554a;
+            --auth-link-hover: #6f3f36;
+            --auth-check-bg: rgba(255, 255, 255, 0.95);
+            --auth-check-border: rgba(216, 155, 140, 0.5);
+            --auth-divider: #987f7b;
+            --auth-divider-line: rgba(216, 155, 140, 0.3);
+            --auth-social-bg: rgba(255, 255, 255, 0.9);
+            --auth-social-border: rgba(216, 155, 140, 0.38);
+            --auth-social-text: #3c2f2f;
+            --auth-social-hover-bg: rgba(216, 155, 140, 0.22);
+            --auth-social-hover-text: #2f2a2a;
+            --auth-social-shadow: rgba(216, 155, 140, 0.28);
+        }
+        html[data-theme="dark"] {
+            --auth-page-base: #130f12;
+            --auth-grad-1: rgba(216, 155, 140, 0.18);
+            --auth-grad-2: rgba(216, 155, 140, 0.14);
+            --auth-card-bg: rgba(29, 23, 27, 0.92);
+            --auth-card-border: rgba(216, 155, 140, 0.25);
+            --auth-shadow: rgba(0, 0, 0, 0.35);
+            --auth-title: #fff4f0;
+            --auth-subtitle: #ccb9b6;
+            --auth-input-bg: rgba(255, 255, 255, 0.05);
+            --auth-input-border: rgba(216, 155, 140, 0.24);
+            --auth-input-text: #f8ece8;
+            --auth-placeholder: rgba(248, 236, 232, 0.58);
+            --auth-label: #d7c3bf;
+            --auth-icon: #ccb9b6;
+            --auth-icon-hover: #f2d4c9;
+            --auth-icon-hover-bg: rgba(216, 155, 140, 0.15);
+            --auth-meta: #ccb9b6;
+            --auth-link: #f2d4c9;
+            --auth-link-hover: #fff4f0;
+            --auth-check-bg: rgba(255, 255, 255, 0.06);
+            --auth-check-border: rgba(216, 155, 140, 0.45);
+            --auth-divider: #b7a3a3;
+            --auth-divider-line: rgba(216, 155, 140, 0.2);
+            --auth-social-bg: rgba(255, 255, 255, 0.03);
+            --auth-social-border: rgba(216, 155, 140, 0.3);
+            --auth-social-text: #f8ece8;
+            --auth-social-hover-bg: rgba(216, 155, 140, 0.18);
+            --auth-social-hover-text: #ffffff;
+            --auth-social-shadow: rgba(216, 155, 140, 0.3);
+        }
+        body.auth-page {
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 96px 16px 32px;
+            background:
+                radial-gradient(circle at 20% 10%, var(--auth-grad-1), transparent 38%),
+                radial-gradient(circle at 85% 85%, var(--auth-grad-2), transparent 42%),
+                var(--auth-page-base);
+        }
+        .auth-tools {
+            position: fixed;
+            top: 18px;
+            right: 18px;
+            display: flex;
+            gap: 10px;
+            z-index: 1100;
+        }
+        .auth-card {
+            width: 100%;
+            max-width: 460px;
+            border-radius: 24px;
+            border: 1px solid var(--auth-card-border);
+            background: var(--auth-card-bg);
+            padding: 34px 30px 28px;
+            box-shadow: 0 24px 60px var(--auth-shadow);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .auth-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--rose-gold);
+            font-family: var(--font-heading);
+            font-size: 2rem;
+        }
+        .auth-logo img {
+            width: 34px;
+            height: 34px;
+        }
+        .auth-title {
+            color: var(--auth-title);
+            margin: 16px 0 6px;
+            font-size: 2.25rem;
+        }
+        .auth-subtitle {
+            color: var(--auth-subtitle);
+            margin-bottom: 24px;
+            font-size: 0.95rem;
+        }
+        .auth-card .form-control {
+            border-radius: 14px;
+            background: var(--auth-input-bg);
+            border: 1px solid var(--auth-input-border);
+            color: var(--auth-input-text);
+            padding: 14px 16px;
+        }
+        .auth-card .form-control::placeholder {
+            color: var(--auth-placeholder);
+        }
+        .field-label {
+            display: inline-block;
+            margin: 0 0 8px 2px;
+            color: var(--auth-label);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 1.3px;
+            text-transform: uppercase;
+        }
+        .password-wrap {
+            position: relative;
+        }
+        .password-input-wrap {
+            position: relative;
+        }
+        .password-input-wrap .form-control {
+            padding-right: 48px;
+        }
+        .password-toggle {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 0;
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: transparent;
+            color: var(--auth-icon);
+            transition: var(--transition-base);
+        }
+        .password-toggle:hover {
+            color: var(--auth-icon-hover);
+            background: var(--auth-icon-hover-bg);
+        }
+        .auth-meta {
+            margin: 12px 2px 18px;
+            color: var(--auth-meta);
+            font-size: 0.88rem;
+        }
+        .auth-meta a {
+            color: var(--auth-link);
+            text-decoration: none;
+        }
+        .auth-meta a:hover {
+            color: var(--auth-link-hover);
+            text-decoration: underline;
+        }
+        .auth-meta .form-check-input {
+            border-color: var(--auth-check-border);
+            background-color: var(--auth-check-bg);
+        }
+        .auth-divider {
+            text-align: center;
+            color: var(--auth-divider);
+            margin: 20px 0 16px;
+            position: relative;
+            font-size: 0.83rem;
+            text-transform: uppercase;
+            letter-spacing: 1.6px;
+        }
+        .auth-divider::before,
+        .auth-divider::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 34%;
+            border-top: 1px solid var(--auth-divider-line);
+        }
+        .auth-divider::before { left: 0; }
+        .auth-divider::after { right: 0; }
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+        }
+        .social-btn {
+            border: 1px solid var(--auth-social-border);
+            border-radius: 14px;
+            background: var(--auth-social-bg);
+            color: var(--auth-social-text);
+            font-weight: 600;
+            padding: 11px 12px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: var(--transition-base);
+        }
+        .social-btn i {
+            font-size: 1.05rem;
+        }
+        .social-btn:hover {
+            border-color: rgba(216, 155, 140, 0.85);
+            background: var(--auth-social-hover-bg);
+            color: var(--auth-social-hover-text);
+            box-shadow: 0 8px 22px var(--auth-social-shadow);
+        }
+        .signup-link {
+            margin-top: 18px;
+            color: var(--auth-meta);
+            font-size: 0.95rem;
+        }
+        .signup-link a {
+            color: var(--auth-link);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .signup-link a:hover {
+            color: var(--auth-link-hover);
+        }
+        @media (max-width: 575px) {
+            .auth-card { padding: 28px 20px 22px; }
+            .auth-title { font-size: 1.95rem; }
+            .auth-tools { top: 12px; right: 12px; }
+            .auth-meta { gap: 12px !important; }
+        }
     </style>
 </head>
-<body>
-    <div class="login-card shadow-lg reveal">
-        <div class="text-center mb-5">
-            <a href="index.html" class="footer-logo justify-content-center">
+<body class="auth-page">
+    <div class="auth-tools">
+        <button class="nav-icon-btn" id="theme-toggle" title="Toggle Theme">
+            <i class="bi bi-moon-stars"></i>
+        </button>
+        <button class="nav-icon-btn" id="rtl-toggle" title="Toggle RTL">
+            <i class="bi bi-arrow-left-right"></i>
+        </button>
+    </div>
+
+    <div class="auth-card login-card shadow-lg reveal">
+        <div class="text-center mb-4">
+            <a href="index.html" class="auth-logo">
                 <img src="assets/images/logo.svg" alt="Logo">
                 <span>GLOW STUDIO</span>
             </a>
-            <h3 class="mt-3">Welcome Back</h3>
+            <h1 class="auth-title">Welcome Back</h1>
+            <p class="auth-subtitle">Sign in to continue your glow journey.</p>
         </div>
+
         <form>
-            <div class="mb-4"><input type="email" class="form-control py-3" placeholder="Email Address"></div>
-            <div class="mb-4"><input type="password" class="form-control py-3" placeholder="Password"></div>
-            <button class="btn btn-luxe w-100 py-3 mb-4">Sign In</button>
-            <div class="text-center small"><a href="register.html" class="text-rose-gold">Create an account</a> | <a href="index.html" class="text-muted">Back to home</a></div>
+            <div class="mb-3">
+                <label class="field-label" for="login-email">Email Address</label>
+                <input type="email" class="form-control" id="login-email" placeholder="Email Address" required>
+            </div>
+            <div class="password-wrap">
+                <label class="field-label" for="login-password">Password</label>
+                <div class="password-input-wrap">
+                    <input type="password" class="form-control" id="login-password" placeholder="Password" required>
+                    <button type="button" class="password-toggle" data-target="login-password" aria-label="Show password">
+                        <i class="bi bi-eye"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="auth-meta d-flex justify-content-between align-items-center flex-wrap">
+                <div class="form-check mb-0">
+                    <input class="form-check-input" type="checkbox" id="remember-me">
+                    <label class="form-check-label" for="remember-me">Remember me</label>
+                </div>
+                <a href="coming-soon.html">Forgot password?</a>
+            </div>
+
+            <button class="btn btn-luxe w-100 py-3">Sign In</button>
+
+            <div class="auth-divider">or continue with</div>
+            <div class="social-grid">
+                <button type="button" class="social-btn" aria-label="Continue with Google">
+                    <i class="bi bi-google"></i><span>Google</span>
+                </button>
+                <button type="button" class="social-btn" aria-label="Continue with Apple">
+                    <i class="bi bi-apple"></i><span>Apple</span>
+                </button>
+            </div>
+
+            <div class="text-center signup-link">
+                <a href="register.html">Create an account</a>
+            </div>
         </form>
     </div>
+
+    <script>
+        document.querySelectorAll('.password-toggle').forEach((button) => {
+            button.addEventListener('click', () => {
+                const field = document.getElementById(button.dataset.target);
+                const icon = button.querySelector('i');
+                const isPassword = field.type === 'password';
+                field.type = isPassword ? 'text' : 'password';
+                icon.className = isPassword ? 'bi bi-eye-slash' : 'bi bi-eye';
+            });
+        });
+    </script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

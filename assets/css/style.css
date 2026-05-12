@@ -434,6 +434,12 @@ section {
     color: var(--text-color);
 }
 
+.footer-links ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
 .footer-links ul li {
     margin-bottom: 12px;
 }
@@ -825,6 +831,17 @@ section {
     height: 300px;
     object-fit: cover;
     border-radius: 10px;
+}
+
+@media (min-width: 992px) {
+    .prestige-membership .prestige-column,
+    .prestige-membership .prestige-feature-list li {
+        text-align: center;
+    }
+    .prestige-membership .prestige-column h4,
+    .prestige-membership .prestige-column .h2 {
+        text-align: center;
+    }
 }
 
 @media (max-width: 991px) {
