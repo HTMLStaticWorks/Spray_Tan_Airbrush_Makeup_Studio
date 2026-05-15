@@ -567,6 +567,8 @@ section {
     transition: var(--transition-base);
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .couture-card::before {
@@ -1426,6 +1428,12 @@ section {
 
 .essentials-grid:hover {
     transform: rotateX(0) rotateY(0);
+}
+
+@media (min-width: 577px) and (max-width: 1024px) {
+    .essentials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .essential-card {
