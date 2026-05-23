@@ -866,7 +866,7 @@ section {
 
     .atelier-grid { flex-direction: column; gap: 60px; text-align: center; }
     .atelier-visual { grid-template-columns: repeat(2, 1fr); gap: 15px; }
-    .atelier-visual img { height: 200px; }
+    .atelier-visual img { height: 350px; }
 
     /* About Page Centering */
     .studio-story, .team-testimonials, .sustainable-luxury, .glow-ritual { text-align: center; }
@@ -1434,6 +1434,7 @@ section {
 @media (min-width: 577px) and (max-width: 1024px) {
     .essentials-grid {
         grid-template-columns: repeat(2, 1fr);
+        transform: none;
     }
 }
 
