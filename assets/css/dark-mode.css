@@ -101,10 +101,6 @@
     color: var(--rose-gold);
 }
 
-[data-theme="dark"] .btn-outline-luxe:hover {
-    color: var(--primary-bg) !important;
-}
-
 /* Fix Dropdowns */
 [data-theme="dark"] .dropdown-menu {
     background: var(--secondary-bg);
@@ -113,6 +109,10 @@
 
 [data-theme="dark"] .dropdown-item {
     color: var(--text-color);
+}
+
+[data-theme="dark"] .text-rose-gold {
+    color: var(--rose-gold) !important;
 }
 
 [data-theme="dark"] .dropdown-item:hover {
